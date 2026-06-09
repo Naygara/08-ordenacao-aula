@@ -11,7 +11,20 @@ void imprimir(const vector<int>& v, const string& label = "") {
 }
 
 void bubbleSort(vector<int>& v) {
-    // todo: Implementar
+    int n = v.size();
+    bool trocou;
+    
+    // loop externo que roda n-1 vezes
+    for (int i = 0; i < n - 1; i++) {
+        trocou = false;
+        
+        // O loop interno diminui a cada iteracao pq os dancarinos ja estao ordenados
+        for (int j = 0; j < n - i - 1; j++) {
+            if (v[j] > v[j + 1]) {
+                // Troca os elementos fora de ordem
+                swap(v[j], v[j + 1]);
+                trocou = true;
+            }
 }
 
 
